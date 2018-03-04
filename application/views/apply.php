@@ -8,9 +8,9 @@
                     $this->load->view('forms/application');
                     $this->load->view('forms/education');
                     $this->load->view('forms/emergency');
-                    $this->load->view('forms/employment_history');
-                    $this->load->view('forms/language');
-                    $this->load->view('forms/health');
+                    // $this->load->view('forms/employment_history');
+                    // $this->load->view('forms/language');
+                    // $this->load->view('forms/health');
     echo            '<br><div class="form-group col-md-12">';
     echo                '<input type="submit" value="Submit Application Form" class=" col-md-12 btn btn-lg btn-primary" name="submit_btn">';                
     echo            '</div>';

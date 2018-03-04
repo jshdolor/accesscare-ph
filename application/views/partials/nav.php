@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-4 header-logo">
                     <br>
-                    <a href="/"><img src="assets/img/logo.png" alt="" class="img-responsive logo"></a>
+                    <a href="<?=base_url()?>"><img src="assets/img/logo.png" alt="" class="img-responsive logo"></a>
                 </div>
 
                 <div class="col-md-8">

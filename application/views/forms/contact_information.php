@@ -917,7 +917,7 @@
             </div>
 
 
-        <div class="form-group col-md-6 col-sm-12 etn">
+<!--     <div class="form-group col-md-6 col-sm-12 etn">
             <label class="form-label" class="form-group col-md-6 col-sm-12 print_display">Tax Number</label>
             <input class="form-control" class="form-label" type="checkbox" id="ETN_type_UNKN" name="ETN_type_UNKN" >
             <label class="form-group col-md-6 col-sm-12 ETN_type_UNKN" for="ETN_type_UNKN">I prefer not to provide or do not currently have a Tax Number</label>
@@ -999,9 +999,9 @@
 
         </select>
         <input class="form-control" type="text" id="ETN_ctrl" class="form-group col-md-6 col-sm-12 etn" name="ETN">
-    </div> 
+    </div>  -->
 
-    <div class="form-group col-md-6 col-sm-12 hdmf_number">
+    <!-- <div class="form-group col-md-6 col-sm-12 hdmf_number">
         <label class="form-label">HDMF Number</label>
         <input class="form-control" type="number" name="hdmf_number">
     </div>
@@ -1014,7 +1014,7 @@
     <div class="form-group col-md-6 col-sm-12 philhealth print_break">
         <label class="form-label">Philhealth Number</label>
         <input class="form-control" type="number" name="philhealth_number">
-    </div>
+    </div> -->
 
 
     </div>
