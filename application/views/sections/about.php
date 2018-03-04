@@ -11,7 +11,7 @@
                         </div>
                         <div class="about-details">
                             <div class="pentagon-text">
-                                <h1>C</h1>
+                                <h1>A</h1>
                             </div>
                             <h3>Children’s specialist</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="about-details">
                             <div class="pentagon-text">
-                                <h1>W</h1>
+                                <h1>C</h1>
                             </div>
 
                             <h3>Children’s specialist</h3>
@@ -41,6 +41,20 @@
                         <div class="about-details">
                             <div class="pentagon-text">
                                 <h1>M</h1>
+                            </div>
+                            <h3>Children’s specialist</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-about-detail clearfix">
+                        <div class="about-img">
+                            <img class="img-responsive" src="assets/img/item1.jpg" alt="">
+                        </div>
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>C</h1>
                             </div>
                             <h3>Children’s specialist</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
