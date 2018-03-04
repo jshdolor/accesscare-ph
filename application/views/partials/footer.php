@@ -17,7 +17,11 @@
     <!-- script tags
     ============================================================= -->
     <?php foreach($scripts as $script) : ?>
-    <script type="text/javascript" src="<?=$script?>"></script>
+        <?php if(is_array($script)): ?>
+            <script <?=$script['attr']?> type="text/javascript" src="<?=$script['url']?>"  ></script>
+        <?php else: ?>
+            <script type="text/javascript" src="<?=$script?>"></script>
+        <?php endif; ?>
     <?php endforeach; ?>
     
 </body>

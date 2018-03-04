@@ -3,16 +3,16 @@ $(document).ready(function () {
 
     $('#slides').carousel();
 
-    //this code is for the gmap
-    // var map = new GMaps({
-    //     el: '#map',
-    //     lat: -12.043333,
-    //     lng: -77.028333
-    // });
-
-
     //this code is for smooth scroll and nav selector
     $(document).ready(function () {
+        // this code is for the gmap
+        var map = new GMaps({
+            el: '#map',
+            lat: -12.043333,
+            lng: -77.028333,
+
+        });
+
         $(document).on("scroll", onScroll);
 
         //smoothscroll
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     function onScroll(event) {
         var scrollPos = $(document).scrollTop();
-        $('.navbar-default .navbar-nav>li>a').each(function () {
+        $('.navbar-default .navbar-nav>li>a.onpage').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {

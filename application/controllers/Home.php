@@ -20,8 +20,8 @@ class Home extends CI_Controller {
 
 		$this->data["footer"] = array(
 			"scripts" => [
-				 base_url()."assets/js/jquery-2.1.1.js"
-			    ,"http://maps.google.com/maps/api/js?sensor=true"
+				"https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyDskvgeVd_YZyRbF7EJnoJh4IV6eWzfozg&callback=initMap"
+				,base_url()."assets/js/jquery-2.1.1.js"
 			    ,base_url()."assets/js/gmaps.js"
 			    ,base_url()."assets/js/smoothscroll.js"
 			    ,base_url()."assets/js/bootstrap.min.js"

@@ -25,11 +25,11 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           
                           <ul class="nav navbar-nav navbar-right">
-                            <li><a class="menu active" href="#home" >Home</a></li>
-                            <li><a class="menu" href="#about">about us</a></li>
-                            <li><a class="menu" href="#service">our services </a></li>
-                            <li><a class="menu" href="#team">our team</a></li>
-                            <li><a class="menu" href="#contact"> contact us</a></li>
+                            <li><a class="menu onpage active" href="#home" >Home</a></li>
+                            <li><a class="menu onpage" href="#about">about us</a></li>
+                            <li><a class="menu onpage" href="#service">our services </a></li>
+                            <li><a class="menu onpage" href="#team">our team</a></li>
+                            <li><a class="menu onpage" href="#contact"> contact us</a></li>
                             <li><a class="menu" href="<?=base_url('apply')?>"> Apply Now</a></li>
                           </ul>
                         </div><!-- /navbar-collapse -->
