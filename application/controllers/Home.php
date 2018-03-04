@@ -7,11 +7,12 @@ class Home extends CI_Controller {
 		parent::__construct();
 
 		$this->data["header"] = array(
-			 "title" => "ACMC"
+			 "title" => "Access Care Management Consultancy"
 			,"styles" => [
 				 base_url()."assets/css/font-awesome.min.css"
 				,base_url()."assets/css/bootstrap.min.css"
 				,base_url()."assets/css/style.css"
+				,base_url()."assets/css/datepicker.css"
 				,"http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300"
 				,"http://fonts.googleapis.com/css?family=BenchNine:300,400,700"
 			],
@@ -25,6 +26,7 @@ class Home extends CI_Controller {
 			    ,base_url()."assets/js/smoothscroll.js"
 			    ,base_url()."assets/js/bootstrap.min.js"
 			    ,base_url()."assets/js/custom.js"
+			    ,base_url()."assets/js/datepicker.js"
 			    ,base_url()."assets/js/script.js"
 			],
 		);
@@ -38,7 +40,7 @@ class Home extends CI_Controller {
 				]
 				,[
 					"icon" => "map-marker",
-					"content" => "<span>Address:</span> 123 Some Street , London, UK, CP 123"
+					"content" => "<span>Address:</span> Blk 63 Lot 9 Asia I, Kapayapaan Village, Brgy. Canlubang, Calamba City, Laguna 4028"
 				]
 				,[
 					"icon" => "phone",

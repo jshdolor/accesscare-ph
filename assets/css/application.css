@@ -13,7 +13,7 @@ section:first-child{
 }
 
 section:nth-child(odd){
-	background-color: #3a9dca;
+	background-color: #d9c187;
 	color: #fff;
 }
 
@@ -28,7 +28,7 @@ section:nth-child(even){
 }
 
 section:nth-child(even)  .btn-repeat{
-	background-color: #3a9dca;
+	background-color: #d9c187;
 	color: #fff;
 }
 
