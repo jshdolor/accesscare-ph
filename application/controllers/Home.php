@@ -82,8 +82,8 @@ class Home extends CI_Controller {
 			],
 		);
 
-		$this->admin_email_address = 'dolorjsh@gmail.com';
-		// $this->admin_email_address = 'acmcofficial@gmail.com';
+		// $this->admin_email_address = 'dolorjsh@gmail.com';
+		$this->admin_email_address = 'acmcofficial@gmail.com';
 	}
 
 	public function index()
@@ -143,9 +143,9 @@ class Home extends CI_Controller {
         $message = $this->input->post('message')? : '';
 
         $msg = "Name: ".$name;
-        $msg .= "\r\n Email: ".$email;
-        $msg .= "\r\n Phone: ".$phone;
-        $msg .= "\r\n Message: ".$message;
+        $msg .= "\r\nEmail: ".$email;
+        $msg .= "\r\nPhone: ".$phone;
+        $msg .= "\r\nMessage: ".$message;
 
         return $msg;
 	}
