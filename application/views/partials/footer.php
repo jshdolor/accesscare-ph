@@ -23,6 +23,13 @@
             <script type="text/javascript" src="<?=$script?>"></script>
         <?php endif; ?>
     <?php endforeach; ?>
+    <!-- messages -->
+
+    <script type="text/javascript">
+        <?php if($this->session->flashdata('success')): ?>
+            swal("Mail Sent!", "Thank you for your message!", "success");
+        <?php endif; ?>
+    </script>
     
 </body>
 </html>

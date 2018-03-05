@@ -12,7 +12,7 @@
                                 <div class="carousel-caption">
                                     <h1><?=$slide['title']?></h1>
                                     <p><?=$slide['subtitle']?></p>
-                                    <button class="slide_btn<?=$key?>" ><?=$slide['btn_msg']?></button>
+                                    <button data-link="<?=$slide['btn_link']?>" class="slide_btn<?=$key?>" ><?=$slide['btn_msg']?></button>
                                 </div>
                             </div>
                         <?php endforeach; ?>

@@ -26,6 +26,10 @@
                                 </li>
                             </ul>
                             <?php endforeach; ?>
+                            <br>
+                            <br>
+                            <br>
+                            LEAVE US A MESSAGE (THIS WILL DIRECTLY EMAIL TO OFFICIAL EMAIL ADDRESS OF ACMC)
                         </div>
                     </div>
                     <div class="col-md-6 col-md-offset-1 contact-form">
@@ -39,11 +43,11 @@
                             ?>
 
                         <form action="<?=$form_url?>" class="form"  enctype="multipart/form-data" method="post">
-                            <input class="name" name="name" type="text" placeholder="Name">
-                            <input class="email" name="email" type="email" placeholder="Email">
-                            <input class="phone" name="phone" type="text" placeholder="Phone No:">
+                            <input class="name" name="name" type="text" placeholder="Name" required>
+                            <input class="email" name="email" type="email" placeholder="Email" required>
+                            <input class="phone" name="phone" type="number" placeholder="Mobile No:" required>
                             <input type="file" name="file" >
-                            <textarea class="message" name="message" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            <textarea class="message" name="message" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                             <input class="submit-btn" type="submit" name="btn" value="SUBMIT">
                         </form>
                     </div>

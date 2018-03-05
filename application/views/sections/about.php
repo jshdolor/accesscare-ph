@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row">
                 <h2>about us</h2>
-                <h4>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</h4>
+                <h4>Access Care Management Consultancy (ACMC) was originally founded in 2016 as a hospice and home health survey consulting. 
+<br>It is also a subsidiary company of Insight Quality Management in California.</h4>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-about-detail clearfix">
                         <div class="about-img">
@@ -13,8 +14,8 @@
                             <div class="pentagon-text">
                                 <h1>A</h1>
                             </div>
-                            <h3>Children’s specialist</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                            <h3>Access</h3>
+                            <p>Dummy Text</p>
                         </div>
                     </div>
                 </div>
@@ -28,8 +29,8 @@
                                 <h1>C</h1>
                             </div>
 
-                            <h3>Children’s specialist</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                            <h3>Care</h3>
+                            <p>Dummy Text</p>
                         </div>
                     </div>
                 </div>
@@ -42,8 +43,8 @@
                             <div class="pentagon-text">
                                 <h1>M</h1>
                             </div>
-                            <h3>Children’s specialist</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                            <h3>Management</h3>
+                            <p>Dummy Text</p>
                         </div>
                     </div>
                 </div>
@@ -56,8 +57,8 @@
                             <div class="pentagon-text">
                                 <h1>C</h1>
                             </div>
-                            <h3>Children’s specialist</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                            <h3>Consultancy</h3>
+                            <p>Dummy Text</p>
                         </div>
                     </div>
                 </div>

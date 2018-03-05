@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	if(window.location.href.indexOf('apply')){
+	if(window.location.href.indexOf('apply') > -1){
 		prepareForm();
 		populateWithDummy();
 

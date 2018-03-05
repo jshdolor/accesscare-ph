@@ -111,7 +111,7 @@ li a.active {
     background: #000 !important;
 }
 .carousel-caption h1 {
-    font-size: 157px;
+    font-size: 90px;
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -123,7 +123,7 @@ li a.active {
     font-weight: bold;
     margin-top: 0;
 }
-.carousel-caption button {
+.carousel-caption button, .carousel-caption a  {
     width: 240px;
     height: 60px;
     background: #d9c187;
@@ -137,7 +137,7 @@ li a.active {
     -o-transition: all .5s ease 0s;
     -ms-transition: all .5s ease 0s;
 }
-.carousel-caption button:hover {
+.carousel-caption button:hover,.carousel-caption a:hover  {
     background: #2a2a2a;
 }
 .carousel-control {
@@ -223,7 +223,7 @@ li a.active {
     background: #fff;
     position: relative;
     top: -30px;
-    left: 43%;
+    left: 40%;
 }
 .pentagon-text:before {
     content: "";
@@ -410,6 +410,7 @@ li a.active {
     padding: 10px;
     background: #d9c187;
     position: relative;
+    min-height: 200px;
     transition: all .7s ease 0s;
     -webkit-transition: all .7s ease 0s;
     -moz-transition: all .7s ease 0s;

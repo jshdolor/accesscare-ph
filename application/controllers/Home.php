@@ -6,6 +6,8 @@ class Home extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 
+		$this->load->library('session');
+
 		$this->data["header"] = array(
 			 "title" => "Access Care Management Consultancy"
 			,"styles" => [
@@ -20,7 +22,8 @@ class Home extends CI_Controller {
 
 		$this->data["footer"] = array(
 			"scripts" => [
-				"https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyDskvgeVd_YZyRbF7EJnoJh4IV6eWzfozg&callback=initMap"
+				 "https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyDskvgeVd_YZyRbF7EJnoJh4IV6eWzfozg&callback=initMap"
+				,"https://unpkg.com/sweetalert/dist/sweetalert.min.js"
 				,base_url()."assets/js/jquery-2.1.1.js"
 			    ,base_url()."assets/js/gmaps.js"
 			    ,base_url()."assets/js/smoothscroll.js"
@@ -36,7 +39,7 @@ class Home extends CI_Controller {
 			,"infos" => [
 				[
 					"icon" => "calendar",
-					"content" => "<span>Monday - Friday:</span> 9:30 AM to 6:30 PM"
+					"content" => "<span>Monday - Friday 8:00 AM - 5:00 PM"
 				]
 				,[
 					"icon" => "map-marker",
@@ -44,15 +47,11 @@ class Home extends CI_Controller {
 				]
 				,[
 					"icon" => "phone",
-					"content" => "<span>Phone:</span> (032) 987-1235"
-				]
-				,[
-					"icon" => "fax",
-					"content" => "<span>Fax:</span> (123) 984-1234"
+					"content" => "<span>Phone:</span> (054) 530-8704"
 				]
 				,[
 					"icon" => "envelope",
-					"content" => "<span>Email:</span> info@doctor.com"
+					"content" => "<span>Email:</span> acmcofficial@gmail.com"
 				]
 			]
 		);
@@ -61,30 +60,30 @@ class Home extends CI_Controller {
 			"slides" => [
 				[
 					 "img" => base_url()."assets/img/slide-one.jpg"
-					,"title" => "Sample 1"
-					,"subtitle" => "Sample Subtitle"
+					,"title" => "HOSPICE SURVEY CONSULTANCING?"
+					,"subtitle" => ""
+					,"btn_link" => '#service'
 					,"btn_msg" => "Learn More"
 				]
 				,[
 					 "img" => base_url()."assets/img/slide-two.jpg"
-					,"title" => "Sample 2"
-					,"subtitle" => "Sample Subtitle"
+					,"title" => "HOME HEALTH CONSULTANCING?"
+					,"subtitle" => ""
+					,"btn_link" => '#service'
 					,"btn_msg" => "Learn More"
 				]
 				,[
 					 "img" => base_url()."assets/img/slide-three.jpg"
-					,"title" => "Sample 3"
-					,"subtitle" => "Sample Subtitle"
-					,"btn_msg" => "Learn More"
-				]
-				,[
-					 "img" => base_url()."assets/img/slide-four.jpg"
-					,"title" => "Sample 4"
-					,"subtitle" => "Sample Subtitle"
+					,"title" => "WHAT IS CLINICAL AUDITING?"
+					,"subtitle" => ""
+					,"btn_link" => '#service'
 					,"btn_msg" => "Learn More"
 				]
 			],
 		);
+
+		$this->admin_email_address = 'joshtester@mailinator.com';
+		// $this->admin_email_address = 'acmcofficial@gmail.com';
 	}
 
 	public function index()
@@ -114,8 +113,54 @@ class Home extends CI_Controller {
         else
         {
                 $data = array('upload_data' => $this->upload->data());
-                $this->data['contact']['success'] = "Successfully sent!";
-                $this->load->view('home', $this->data);
+                $this->session->set_flashdata('success',true);
+
+                $name = $this->input->post('name')? : '';
+                $email = $this->input->post('email')? : '';
+                $phone = $this->input->post('phone')? : '';
+                $message = $this->input->post('message')? : '';
+
+                $msg = "Name: ".$name;
+                $msg .= "\r\n Email: ".$email;
+                $msg .= "\r\n Phone: ".$phone;
+                $msg .= "\r\n Message: ".$message;
+
+                $this->send_email($msg);
+                redirect('');
         }
 	}
+
+	private function send_email($message){
+		$path = "/uploads/";
+		$file = $path.$filename;
+		$content = file_get_contents( $file);
+		$content = chunk_split(base64_encode($content));
+		$uid = md5(uniqid(time()));
+		$name = basename($file);
+
+		// header
+		$header = "From: accesscare-ph.com <admin@accesscare-ph.com>\r\n";
+		$header .= "Reply-To: ".$replyto."\r\n";
+		$header .= "MIME-Version: 1.0\r\n";
+		$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+
+		// message & attachment
+		$nmessage = "--".$uid."\r\n";
+		$nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+		$nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+		$nmessage .= $message."\r\n\r\n";
+		$nmessage .= "--".$uid."\r\n";
+		$nmessage .= "Content-Type: application/octet-stream; name=\"".$filename."\"\r\n";
+		$nmessage .= "Content-Transfer-Encoding: base64\r\n";
+		$nmessage .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
+		$nmessage .= $content."\r\n\r\n";
+		$nmessage .= "--".$uid."--";
+
+		if (mail($this->admin_email_address, 'ACMC - Leave a msg', $msg,$header)) {
+		    return true; // Or do something here
+		} else {
+		  return false;
+		}
+	}
+
 }

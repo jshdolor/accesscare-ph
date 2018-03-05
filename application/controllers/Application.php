@@ -27,7 +27,7 @@ class Application extends CI_Controller {
 			    ,base_url()."assets/js/smoothscroll.js"
 			    ,base_url()."assets/js/bootstrap.min.js"
 			    ,base_url()."assets/js/datepicker.js"
-			    ,base_url()."assets/js/custom.js"
+			    // ,base_url()."assets/js/custom.js"
 			    ,base_url()."assets/js/script.js"
 			],
 		);

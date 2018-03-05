@@ -3,6 +3,11 @@ $(document).ready(function () {
 
     $('#slides').carousel();
 
+    $('#slides button').click(function(){
+        var link = $(this).data('link');
+        $('.nav a[href="'+link+'"]').trigger('click');
+    })
+
     //this code is for smooth scroll and nav selector
     $(document).ready(function () {
         // this code is for the gmap
