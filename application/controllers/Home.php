@@ -110,8 +110,8 @@ class Home extends CI_Controller {
         {
             $msg = $this->prepare_msg();
 
-        	if(mail($this->admin_email_address, 'ACMC - Leave a msg', $msg)){
-
+        	if(!mail($this->admin_email_address, 'ACMC - Leave a msg', $msg)){
+                $this->session->set_flashdata('success',true);
         	}else
         	{
 	        	$this->session->set_flashdata('error',true);
@@ -122,8 +122,11 @@ class Home extends CI_Controller {
                 $data = array('upload_data' => $this->upload->data());
 
                 $msg = $this->prepare_msg();
-
-                if($this->send_email($msg, "latest_file")){
+				
+				$upload_data = $this->upload->data();
+				$file_name = $upload_data['file_name'];
+                
+                if($this->send_email($msg, $file_name)){
                 	$this->session->set_flashdata('success',true);
                 }else
                 {
@@ -173,7 +176,6 @@ class Home extends CI_Controller {
 		$nmessage .= $content."\r\n\r\n";
 		$nmessage .= "--".$uid."--";
 
-		$nmessage .= "\r\n".$message;
 
 		if (mail($this->admin_email_address, 'ACMC - Leave a msg', $nmessage,$header)) {
 		    return true; // Or do something here
