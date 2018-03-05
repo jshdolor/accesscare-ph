@@ -101,37 +101,54 @@ class Home extends CI_Controller {
         $config['max_size']             = 100;
         $config['max_width']            = 1024;
         $config['max_height']           = 768;
+        $config['overwrite'] 			= TRUE;
+        $config['file_name'] 			= "latest_file";
 
         $this->load->library('upload', $config);
 
         if ( ! $this->upload->do_upload('file'))
         {
-                $errors = array('error' => $this->upload->display_errors());
-                $this->data['contact']['errors'] = $errors;
-                $this->load->view('home', $this->data);
+            $msg = $this->prepare_msg();
+
+        	if(mail($this->admin_email_address, 'ACMC - Leave a msg', $msg)){
+
+        	}else
+        	{
+	        	$this->session->set_flashdata('error',true);
+        	}
         }
         else
         {
                 $data = array('upload_data' => $this->upload->data());
-                $this->session->set_flashdata('success',true);
 
-                $name = $this->input->post('name')? : '';
-                $email = $this->input->post('email')? : '';
-                $phone = $this->input->post('phone')? : '';
-                $message = $this->input->post('message')? : '';
+                $msg = $this->prepare_msg();
 
-                $msg = "Name: ".$name;
-                $msg .= "\r\n Email: ".$email;
-                $msg .= "\r\n Phone: ".$phone;
-                $msg .= "\r\n Message: ".$message;
-
-                $this->send_email($msg);
-                redirect('');
+                if($this->send_email($msg, "latest_file")){
+                	$this->session->set_flashdata('success',true);
+                }else
+                {
+	                $this->session->set_flashdata('error',true);
+                }
         }
+        redirect('');
 	}
 
-	private function send_email($message){
-		$path = "/uploads/";
+	private function prepare_msg(){
+		$name = $this->input->post('name')? : '';
+        $email = $this->input->post('email')? : '';
+        $phone = $this->input->post('phone')? : '';
+        $message = $this->input->post('message')? : '';
+
+        $msg = "Name: ".$name;
+        $msg .= "\r\n Email: ".$email;
+        $msg .= "\r\n Phone: ".$phone;
+        $msg .= "\r\n Message: ".$message;
+
+        return $msg;
+	}
+
+	private function send_email($message,$filename){
+		$path = "./uploads/";
 		$file = $path.$filename;
 		$content = file_get_contents( $file);
 		$content = chunk_split(base64_encode($content));
@@ -140,7 +157,7 @@ class Home extends CI_Controller {
 
 		// header
 		$header = "From: accesscare-ph.com <admin@accesscare-ph.com>\r\n";
-		$header .= "Reply-To: ".$replyto."\r\n";
+		$header .= "Reply-To: noreply@accesscare-ph.com \r\n";
 		$header .= "MIME-Version: 1.0\r\n";
 		$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
 

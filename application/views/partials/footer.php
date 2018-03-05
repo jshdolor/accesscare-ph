@@ -29,6 +29,9 @@
         <?php if($this->session->flashdata('success')): ?>
             swal("Mail Sent!", "Thank you for your message!", "success");
         <?php endif; ?>
+        <?php if($this->session->flashdata('error')): ?>
+            swal("Mail NOT Sent!", "Please try again..", "error");
+        <?php endif; ?>
     </script>
     
 </body>
