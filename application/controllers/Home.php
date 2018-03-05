@@ -82,7 +82,7 @@ class Home extends CI_Controller {
 			],
 		);
 
-		$this->admin_email_address = 'joshtester@mailinator.com';
+		$this->admin_email_address = 'dolorjsh@gmail.com';
 		// $this->admin_email_address = 'acmcofficial@gmail.com';
 	}
 
