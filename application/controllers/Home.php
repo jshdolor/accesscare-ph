@@ -173,7 +173,9 @@ class Home extends CI_Controller {
 		$nmessage .= $content."\r\n\r\n";
 		$nmessage .= "--".$uid."--";
 
-		if (mail($this->admin_email_address, 'ACMC - Leave a msg', $msg,$header)) {
+		$nmessage .= "\r\n".$message;
+
+		if (mail($this->admin_email_address, 'ACMC - Leave a msg', $nmessage,$header)) {
 		    return true; // Or do something here
 		} else {
 		  return false;
