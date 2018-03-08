@@ -30,7 +30,7 @@
                             <li><a class="menu onpage" href="#service">our services </a></li>
                             <li><a class="menu onpage" href="#team">our team</a></li>
                             <li><a class="menu onpage" href="#contact"> contact us</a></li>
-                            <li><a class="menu" href="<?=base_url('apply')?>"> Apply Now</a></li>
+                            <li><a class="menu" href="<?=base_url('apply')?>"> Careers</a></li>
                           </ul>
                         </div><!-- /navbar-collapse -->
                       </div><!-- / .container-fluid -->

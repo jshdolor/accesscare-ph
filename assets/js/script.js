@@ -21,6 +21,15 @@ function prepareForm(){
 		}
 	});
 
+	$('#is_permanent').change(function(){
+		if($(this).is(":checked")){
+			$('.secondary_address input, .secondary_address select').prop("disabled",true);
+		}else
+		{
+			$('.secondary_address input, .secondary_address select').prop('disabled',false);
+		}
+	})
+
 	$('.form-date').datepicker();
 }
 

@@ -345,10 +345,11 @@
         </div> 
 
             <div class="row col-md-6 col-sm-12  address_entry primary_address">
-                <label class="form-label form-group col-md-12">Current Address</label>
+                <label class="form-label form-group col-md-6">Current Address</label>
+                <label class="form-label form-group col-md-6"><input id="is_permanent" type="checkbox" name="current_address_same_as_permanent_address"> Permanent Address?</label>
                 <div class="form-group col-md-6 col-sm-12 country print_break">
                     <label class="form-label">Country</label>
-                    <select class="form-control" name="country" id="country">
+                    <select class="form-control" name="current_country" id="country">
                         <option value="">Choose</option>
                         <option>AFGHANISTAN</option>
                         <option>ALAND ISLANDS</option>
@@ -606,27 +607,27 @@
 
                 <div class="form-group col-md-6 col-sm-12 zip" id="zip_input">
                     <label class="form-label">Post Code</label>
-                    <input class="form-control" type="text" id="zip" name="zip">
+                    <input class="form-control" type="text" id="zip" name="current_zip">
                 </div>
 
                 <div class="form-group col-md-6 col-sm-12 barangay print_break" id="barangay_input">
                     <label class="form-label">Barangay</label>
-                    <input class="form-control" type="text" name="barangay">
+                    <input class="form-control" type="text" name="current_barangay">
                 </div>
 
                 <div class="form-group col-md-6 col-sm-12 city" id="city_input">
                     <label class="form-label">City</label>
-                    <input class="form-control" type="text" name="city" id="city">
+                    <input class="form-control" type="text" name="current_city" id="city">
                 </div>
 
                 <div class="form-group col-md-6 col-sm-12 state" id="state_input">
                     <label class="form-label">Province</label>
-                    <input class="form-control" type="text" name="state" id="state">
+                    <input class="form-control" type="text" name="current_state" id="state">
                 </div>
 
                 <div class="form-group col-md-12 col-sm-12 address">
                     <label class="form-label">Address</label>
-                    <textarea class="form-control"  name="address"></textarea>
+                    <textarea class="form-control"  name="current_address"></textarea>
                 </div>
             </div>
 
