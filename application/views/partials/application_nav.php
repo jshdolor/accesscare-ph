@@ -3,12 +3,12 @@
     <header class="top-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-5 header-logo">
+                <div class="col-xs-3 header-logo">
                     <br>
                     <a href="/"><img src="assets/img/logo.png" alt="" class="img-responsive logo"></a>
                 </div>
 
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <nav class="navbar navbar-default">
                       <div class="container-fluid nav-bar">
                         <!-- Brand and toggle get grouped for better mobile display -->

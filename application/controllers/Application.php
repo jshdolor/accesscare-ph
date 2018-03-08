@@ -67,7 +67,7 @@ class Application extends CI_Controller {
 			}
 		}
 		$this->toPDF($data);
-		if($this->send_email()){
+		if($this->send_email("Resume Generated from accesscare-ph.com",$this->getFileName().".pdf")){
 			$this->session->set_flashdata('success',true);
 		}else
 		{
