@@ -5,6 +5,7 @@ class Application extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
+		$this->load->library('session');
 
 		$this->data["header"] = array(
 			 "title" => "ACMC"
@@ -32,7 +33,9 @@ class Application extends CI_Controller {
 			],
 		);
 
-		// $this->load->library('pdfgenerator');
+		$this->load->library('pdfgenerator');
+		$this->admin_email_address = 'dolorjsh@gmail.com';
+		// $this->admin_email_address = 'acmcofficial@gmail.com';
 
 	}
 
@@ -64,7 +67,13 @@ class Application extends CI_Controller {
 			}
 		}
 		$this->toPDF($data);
-		// $this->toCsv($data);
+		if($this->send_email()){
+			$this->session->set_flashdata('success',true);
+		}else
+		{
+			$this->session->set_flashdata('error',true);
+		}
+		redirect('');
 	}
 
 	private function toPDF($data){
@@ -76,19 +85,19 @@ class Application extends CI_Controller {
 					$explode = explode("*,!,*", $vvalue);
 					$label = $explode[0];
 					$value = $explode[1];
-					$html .= "<h1>".$this->makeLabel($label).":".$value."</h1>";
+					$html .= "<p>".$this->makeLabel($label).":".$value."</p>";
 				}
 			}else
 			{
 				$explode = explode("*,!,*", $data_value);
 				$label = $explode[0];
 				$value = $explode[1];
-				$html .= "<h1>".$this->makeLabel($label).":".$value."</h1>";
+				$html .= "<p>".$this->makeLabel($label).":".$value."</p>";
 			}
 			
 		}
-		dd($html);
-		$this->pdfgenerator->generate($html,$this->getFileName());
+
+		$this->pdfgenerator->save($html,$this->getFileName());
 	}
 
 	private function makeLabel($label){
@@ -120,7 +129,41 @@ class Application extends CI_Controller {
 			.$this->input->post('first_name')
 			.' '
 			.$this->input->post('middle_name')
-			.'_'
+			.' '
 			.time();
+	}
+
+	private function send_email($message="Resume Generated from accesscare-ph.com",$filename="latest_cv.pdf"){
+		$path = "./uploads/";
+		$file = $path.$filename;
+		$content = file_get_contents( $file);
+		$content = chunk_split(base64_encode($content));
+		$uid = md5(uniqid(time()));
+		$name = basename($file);
+
+		// header
+		$header = "From: accesscare-ph.com <admin@accesscare-ph.com>\r\n";
+		$header .= "Reply-To: noreply@accesscare-ph.com \r\n";
+		$header .= "MIME-Version: 1.0\r\n";
+		$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+
+		// message & attachment
+		$nmessage = "--".$uid."\r\n";
+		$nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+		$nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+		$nmessage .= $message."\r\n\r\n";
+		$nmessage .= "--".$uid."\r\n";
+		$nmessage .= "Content-Type: application/octet-stream; name=\"".$filename."\"\r\n";
+		$nmessage .= "Content-Transfer-Encoding: base64\r\n";
+		$nmessage .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
+		$nmessage .= $content."\r\n\r\n";
+		$nmessage .= "--".$uid."--";
+
+
+		if (mail($this->admin_email_address, 'ACMC - Application', $nmessage,$header)) {
+		    return true; // Or do something here
+		} else {
+		  return false;
+		}
 	}
 }

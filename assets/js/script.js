@@ -44,12 +44,12 @@ function createDummy(){
 }
 
 function populateWithDummy(){
-	// $('input:not("[type=submit]"),textarea').each(function(){
-	// 	$(this).val(createDummy());
-	// })
+	$('input:not("[type=submit]"),textarea').each(function(){
+		$(this).val(createDummy());
+	})
 
-	// $('select').each(function(){
-	// 	var value = $(this).find('option').eq(1).html()
-	// 	$(this).val(value);
-	// });
+	$('select').each(function(){
+		var value = $(this).find('option').eq(1).html()
+		$(this).val(value);
+	});
 }

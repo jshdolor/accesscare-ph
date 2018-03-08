@@ -18,4 +18,14 @@ class Pdfgenerator {
         return $dompdf->output();
     }
   }
+
+  public function save($html,$filename, $paper = 'A4', $orientation = "portrait"){
+    $dompdf = new DOMPDF();
+    $dompdf->load_html($html);
+    $dompdf->set_paper($paper, $orientation);
+    $dompdf->render();
+    $output = $dompdf->output();
+    file_put_contents('./uploads/'.$filename.'.pdf', $output);
+  }
+
 }

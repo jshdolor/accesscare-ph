@@ -382,6 +382,31 @@ li a.active {
     position: absolute;
 }
 
+/*join section*/
+
+.join {
+    /*background: url(../img/pattern.jpg);*/
+    background-repeat: repeat-y;
+    margin-top: 40px;
+    background-color: #d9c187;
+}
+.join h2 {
+    font-size: 90px;
+    color: #fff;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+.join .col-md-6{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.join li{
+    list-style: initial;
+}
+
 /*team section*/
 
 .team {
