@@ -43,11 +43,11 @@ class Home extends CI_Controller {
 				]
 				,[
 					"icon" => "map-marker",
-					"content" => "<span>Address:</span> Blk 63 Lot 9 Asia I, Kapayapaan Village, Brgy. Canlubang, Calamba City, Laguna 4028"
+					"content" => "<span>Address:</span> Blk 63 Lot 1 Asia I, Kapayapaan Village, Brgy. Canlubang, Calamba City, Laguna 4028"
 				]
 				,[
 					"icon" => "phone",
-					"content" => "<span>Phone:</span> (054) 530-8704"
+					"content" => "<span>Phone:</span> +63 926 723 5495‬"
 				]
 				,[
 					"icon" => "envelope",

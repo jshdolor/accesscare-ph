@@ -18,17 +18,17 @@
                     <div class="single-service">
                         <div class="single-service-img">
                             <div class="service-img">
-                                <img class="knee img-responsive" src="assets/img/service3.png" alt="">
+                                <img class="img-home img-responsive" src="assets/img/service-health.png" alt="">
                             </div>
                         </div>
                         <h3>HOME HEALTH CONSULTANCING</h3>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="single-service">
+                    <div class="single-service" data-toggle="modal" data-target="#chartContent">
                         <div class="single-service-img">
                             <div class="service-img">
-                                <img class="bone img-responsive" src="assets/img/service4.png" alt="">
+                                <img class="img-chart img-responsive" src="assets/img/service-chart.png" alt="">
                             </div>
                         </div>
                         <h3>CHART AUDITING</h3>

@@ -223,7 +223,7 @@ li a.active {
     background: #fff;
     position: relative;
     top: -30px;
-    left: 40%;
+    left: 38%;
 }
 .pentagon-text:before {
     content: "";
@@ -388,19 +388,20 @@ li a.active {
     /*background: url(../img/pattern.jpg);*/
     background-repeat: repeat-y;
     margin-top: 40px;
-    background-color: #d9c187;
+    margin-bottom: 40px;
+    background-color: #fff;
 }
 .join h2 {
     font-size: 90px;
-    color: #fff;
-    margin-top: 70px;
+    color: #d9c187;
+    margin-top: 40px;
     margin-bottom: 0;
 }
 .join .col-md-6{
     padding-top: 35px;
     padding-bottom: 35px;
     font-size: 24px;
-    color: #fff;
+    color: #d9c187;
 }
 
 .join li{
@@ -870,6 +871,9 @@ responsive area
         font-size: 50px;
         margin-top: 40px;
     }
+
+    
+
     .team h2 {
         font-size: 50px;
         margin-top: 40px;
@@ -925,4 +929,32 @@ responsive area
     .footer p {
         font-size: 10px;
     }
+}
+
+.single-service
+{
+    cursor: pointer;
+}
+
+.single-service:hover h3
+{
+    color: #737373;
+}
+
+.modal{
+    z-index: 100000;
+}
+
+.modal li {
+    list-style: inherit;
+}
+
+.img-chart {
+    height: 130px !important;
+    left: 18% !important;
+}
+.img-home {
+    height: 110px;
+    left: 21%;
+    top: 5%;
 }

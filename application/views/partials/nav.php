@@ -28,7 +28,7 @@
                             <li><a class="menu onpage active" href="#home" >Home</a></li>
                             <li><a class="menu onpage" href="#about">about us</a></li>
                             <li><a class="menu onpage" href="#service">our services </a></li>
-                            <li><a class="menu onpage" href="#team">our team</a></li>
+                            <!-- <li><a class="menu onpage" href="#team">our team</a></li> -->
                             <li><a class="menu onpage" href="#join"> join us</a></li>
                             <li><a class="menu onpage" href="#contact"> contact us</a></li>
                             <li><a class="menu" href="<?=base_url('apply')?>"> Careers</a></li>
