@@ -4,7 +4,7 @@
             <div class="row">
                 <h2>our services</h2>
                 <h4></h4>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-6 hide">
                     <div class="single-service">
                         <div class="single-service-img">
                             <div class="service-img">
@@ -14,7 +14,7 @@
                         <h3>HOSPICE SURVEY CONSULTANCING</h3>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-6 hide">
                     <div class="single-service">
                         <div class="single-service-img">
                             <div class="service-img">
@@ -24,7 +24,7 @@
                         <h3>HOME HEALTH CONSULTANCING</h3>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-12 col-sm-12">
                     <div class="single-service" data-toggle="modal" data-target="#chartContent">
                         <div class="single-service-img">
                             <div class="service-img">

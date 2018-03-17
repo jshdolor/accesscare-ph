@@ -60,14 +60,14 @@ class Home extends CI_Controller {
 			"slides" => [
 				[
 					 "img" => base_url()."assets/img/slide-one.jpg"
-					,"title" => "HOSPICE SURVEY CONSULTANCING?"
+					,"title" => "WHAT IS CLINICAL AUDITING?"
 					,"subtitle" => ""
 					,"btn_link" => '#service'
 					,"btn_msg" => "Learn More"
 				]
 				,[
 					 "img" => base_url()."assets/img/slide-two.jpg"
-					,"title" => "HOME HEALTH CONSULTANCING?"
+					,"title" => "WHAT IS CLINICAL AUDITING?"
 					,"subtitle" => ""
 					,"btn_link" => '#service'
 					,"btn_msg" => "Learn More"
