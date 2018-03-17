@@ -3,12 +3,12 @@
     <header class="top-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3 header-logo">
+                <div class="col-xs-5 header-logo">
                     <br>
                     <a href="<?=base_url()?>"><img src="assets/img/logo.png" alt="" class="img-responsive logo"></a>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <nav class="navbar navbar-default">
                       <div class="container-fluid nav-bar">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,7 +29,7 @@
                             <li><a class="menu onpage" href="#about">about us</a></li>
                             <li><a class="menu onpage" href="#service">our services </a></li>
                             <!-- <li><a class="menu onpage" href="#team">our team</a></li> -->
-                            <li><a class="menu onpage" href="#join"> join us</a></li>
+                            <!-- <li><a class="menu onpage" href="#join"> join us</a></li> -->
                             <li><a class="menu onpage" href="#contact"> contact us</a></li>
                             <li><a class="menu" href="<?=base_url('apply')?>"> Careers</a></li>
                           </ul>

@@ -35,7 +35,7 @@ class Application extends CI_Controller {
 
 		$this->load->library('pdfgenerator');
 		// $this->admin_email_address = 'dolorjsh@gmail.com';
-		$this->admin_email_address = 'acmcofficial@gmail.com';
+		$this->admin_email_address = 'accesscareph@gmail.com';
 
 	}
 

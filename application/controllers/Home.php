@@ -51,7 +51,7 @@ class Home extends CI_Controller {
 				]
 				,[
 					"icon" => "envelope",
-					"content" => "<span>Email:</span> acmcofficial@gmail.com"
+					"content" => "<span>Email:</span> accesscareph@gmail.com"
 				]
 			]
 		);
@@ -83,7 +83,7 @@ class Home extends CI_Controller {
 		);
 
 		// $this->admin_email_address = 'dolorjsh@gmail.com';
-		$this->admin_email_address = 'acmcofficial@gmail.com';
+		$this->admin_email_address = 'accesscareph@gmail.com';
 	}
 
 	public function index()

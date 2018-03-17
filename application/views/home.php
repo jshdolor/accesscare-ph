@@ -6,7 +6,7 @@
     $this->load->view('sections/about');
     $this->load->view('sections/services');
     // $this->load->view('sections/team');
-    $this->load->view('sections/join');
+    // $this->load->view('sections/join');
     $this->load->view('sections/contact', $contact);
     $this->load->view('sections/modals', $contact);
     
